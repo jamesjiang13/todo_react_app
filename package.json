@@ -19,8 +19,8 @@
 	"scripts": {
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build",
-		"start": "react-scripts start & node -r newrelic index.js",
-		"build": "react-scripts build & node -r newrelic index.js",
+		"start": "react-scripts start & node --experimental-loader=newrelic/esm-loader.mjs index.js",
+		"build": "react-scripts build & node --experimental-loader=newrelic/esm-loader.mjs index.js",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
